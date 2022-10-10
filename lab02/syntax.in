@@ -30,7 +30,7 @@ iostmt ::= "READ" | "WRITE" "(" IDENTIFIER ")"
 
 structstmt ::= cmpdstmt | ifstmt | whilestmt
 
-ifstmt ::= "IF" "(" condition ")" "THEN" stmt ["ELSE" stmt]
+ifstmt ::= "IF" "(" condition ")" "THEN" stmt "ELSE" stmt
 
 whilestmt ::= "WHILE" "(" condition ")" "{" stmt "}"
 
