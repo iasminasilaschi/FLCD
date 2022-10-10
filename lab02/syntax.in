@@ -10,6 +10,8 @@ arraydecl ::= "ARRAY" "[" nr "]" "OF" type1
 
 type  ::= type1|arraydecl
 
+userdef ::= "TYPEDEF" IDENTIFIER "{" decllist "}"
+
 cmpdstmt ::= "{" stmtlist "}"
 
 stmtlist ::= stmt | stmt ";" stmtlist
