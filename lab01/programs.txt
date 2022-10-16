@@ -1,0 +1,152 @@
+Statement: Considering a small programming language (that we shall call mini-langauge), write 3 small programs in this language.
+
+
+Deliverables: p1.* , p2.*, and p3.* and p1err.*  -  small programs written in your programming language  (p1, p2, p3  should be lexically correct; 
+p1err should contain 2 types of lexical errors).
+
+For example: 
+
+p1 and p2: compute de max/min of 3 numbers; verify if a number is prime, compute gcd of 2 numbers, compute the solutions for a 2nd order equation, 
+aso
+
+p3: compute the sum of n numbers, computer the max/min of n numbers
+
+
+
+
+-> p1: max of 3 numbers
+
+BEGIN
+
+int x;
+
+int y;
+
+int z;
+
+int max = 0;
+
+read(x);
+
+read(y);
+
+read(z);
+
+if(x >= y && y >= z) {
+
+	max = x;
+
+} else if(y >= z && y >= z) {
+	
+	max = y;
+
+} else {
+
+	max = z;
+}
+
+write(max);
+
+END
+
+
+
+-> p2: number is prime
+
+BEGIN
+
+int x;
+
+bool isPrime = true;
+
+read(x);
+
+if(x <= 0) {
+	
+	isPrime = false;
+
+} else if(x == 1) {
+	
+	isPrime = false;
+}
+
+for (i = 2; i <= sqrt(x); i++) {
+
+	if( x%i == 0) {
+
+		isPrime = false;		
+
+	}
+}
+
+write(isPrime);
+
+END
+
+
+
+-> p3: sum of 3 numbers
+
+BEGIN
+
+int sum = 0;
+
+int aux;
+
+int n;
+
+int i = 0;
+
+array[100] of int numbers;
+
+read(n);
+
+for (i=0; i<n; i++) {
+	
+	read(aux);
+
+	sum = sum + aux;
+}
+
+write(sum);
+
+END
+
+
+
+-> p1*err: max of 3 numbers with 2 lexical errors
+
+BEGIN
+
+int x;
+
+int y;
+
+int z;
+
+int max = 0;
+
+read(x);
+
+read(y);
+
+read(z);
+
+// lexical error1: 'and' instead of '&&'
+if(x >= y and y >= z) {
+
+	max = x;
+
+// lexical error2: no 'if' keyword
+} else (y >= z && y >= z) {
+	
+	max = y;
+
+} else {
+
+	max = z;
+}
+
+write(max);
+
+END 
