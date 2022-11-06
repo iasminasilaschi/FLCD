@@ -38,6 +38,10 @@ class HashTable:
                 linearized_table.append(keyword)
         return linearized_table
 
+    def get_position(self, key):
+        hash_value = self.__hash(key)
+        return hash_value, self.table[hash_value].index(key)
+
     def __str__(self):
         string = ""
         hash_value = 0

@@ -56,8 +56,9 @@ class Scanner:
                 else:
                     try:
                         if self.valid_symbol(token):
-                            self.symbol_table.add(token)
-                            all_tokens.append((token, (line_index, part_index)))
+                            if not self.symbol_table.contains(token):
+                                self.symbol_table.add(token)
+                            all_tokens.append((token, (self.symbol_table.get_position(token))))
                     except Exception:
                         self.lexical_errors.append("lexical error (" + str(line_index) + ", " + str(part_index) + ")")
                 part_index += 1
