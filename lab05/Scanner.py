@@ -66,7 +66,6 @@ class Scanner:
 
         self.write_pif(all_tokens)
         self.write_st()
-        return all_tokens
 
     def tokenize(self, line):
         for separator in self.separator_table.get_all():
@@ -88,6 +87,7 @@ class Scanner:
                 tokens.pop(index + 1)
                 index -= 1
             index += 1
+
         return tokens
 
     def is_operator(self, part):
