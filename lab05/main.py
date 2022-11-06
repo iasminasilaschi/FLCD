@@ -8,8 +8,9 @@ if __name__ == '__main__':
     p3 = "C://Users//Iasmina//PycharmProjects//FLCD//lab05//p3.txt"
     p1_err = "C://Users//Iasmina//PycharmProjects//FLCD//lab05//p1-err.txt"
 
-    try:
-        print(scanner.scan(p1))
-        print(scanner.lexical_errors)
-    except Exception as exception:
-        print(exception)
+    scanner.scan(p1)
+    if scanner.lexical_errors:
+        for error in scanner.lexical_errors:
+            print(error)
+    else:
+        print("lexically correct")
