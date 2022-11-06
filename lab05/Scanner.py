@@ -107,6 +107,7 @@ class Scanner:
             return False
         return True
 
+    @staticmethod
     def write_pif(self, tokens):
         file = open("C://Users//Iasmina//PycharmProjects//FLCD//lab05//PIF.out", 'w')
         for token in tokens:
