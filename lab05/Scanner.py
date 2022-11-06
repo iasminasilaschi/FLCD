@@ -108,7 +108,7 @@ class Scanner:
         return True
 
     @staticmethod
-    def write_pif(self, tokens):
+    def write_pif(tokens):
         file = open("C://Users//Iasmina//PycharmProjects//FLCD//lab05//PIF.out", 'w')
         for token in tokens:
             file.write(str(token[0]) + "\t\t (" + str(token[1][0]) + ", " + str(token[1][1]) + ")\n")
