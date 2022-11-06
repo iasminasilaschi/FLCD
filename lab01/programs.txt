@@ -124,7 +124,8 @@ int y;
 
 int z;
 
-int max = 0;
+// lexical error 1: character $
+int $max = 0;
 
 read(x);
 
@@ -132,14 +133,13 @@ read(y);
 
 read(z);
 
-// lexical error1: 'and' instead of '&&'
 if(x >= y and y >= z) {
 
 	max = x;
 
-// lexical error2: no 'if' keyword
+// lexical error 2: && instead of and
 } else (y >= z && y >= z) {
-	
+
 	max = y;
 
 } else {
@@ -149,4 +149,4 @@ if(x >= y and y >= z) {
 
 write(max);
 
-END 
+END

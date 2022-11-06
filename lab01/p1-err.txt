@@ -1,0 +1,32 @@
+BEGIN
+
+int x;
+
+int y;
+
+int z;
+
+int $max = 0;
+
+read(x);
+
+read(y);
+
+read(z);
+
+if(x >= y and y >= z) {
+
+	max = x;
+
+} else (y >= z && y >= z) {
+
+	max = y;
+
+} else {
+
+	max = z;
+}
+
+write(max);
+
+END
