@@ -1,4 +1,4 @@
-from lab03.HashTable import HashTable
+from week03.HashTable import HashTable
 
 
 class TestHashTable:

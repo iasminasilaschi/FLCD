@@ -1,4 +1,4 @@
-from lab03.HashTable import HashTable
+from week05.HashTable import HashTable
 
 
 class Scanner:
@@ -20,7 +20,7 @@ class Scanner:
         self.populate_tables()
 
     def populate_tables(self):
-        file = open('C://Users//Iasmina//PycharmProjects//FLCD//lab02//token.in', 'r')
+        file = open('/week05//token.in', 'r')
         position = 0
         for line in file:
             if position < self.last_character_position:
@@ -67,7 +67,6 @@ class Scanner:
 
         self.write_pif(all_tokens)
         self.write_st()
-        return all_tokens
 
     def tokenize(self, line):
         for separator in self.separator_table.get_all():
@@ -89,6 +88,7 @@ class Scanner:
                 tokens.pop(index + 1)
                 index -= 1
             index += 1
+
         return tokens
 
     def is_operator(self, part):
@@ -108,11 +108,12 @@ class Scanner:
             return False
         return True
 
-    def write_pif(self, tokens):
-        file = open("C://Users//Iasmina//PycharmProjects//FLCD//lab04//PIF.out", 'w')
+    @staticmethod
+    def write_pif(tokens):
+        file = open("/week05//PIF.out", 'w')
         for token in tokens:
             file.write(str(token[0]) + "\t\t (" + str(token[1][0]) + ", " + str(token[1][1]) + ")\n")
 
     def write_st(self):
-        file = open("C://Users//Iasmina//PycharmProjects//FLCD//lab04//ST.out", 'w')
+        file = open("/week05//ST.out", 'w')
         file.write(str(self.symbol_table))
