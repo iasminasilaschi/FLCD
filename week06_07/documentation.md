@@ -43,6 +43,6 @@ __Input:__ none
 __Output:__ true if it is valid, false otherwise
 
 #### read_input_file(self):
-__Description:__ Reads the components of the FA and populates all the components. They should be structured as specified in the "FA_syntax.in" file.
+__Description:__ Reads the components of the FA and populates all the components. They should be structured as specified in the "FA_syntax.in" file.  
 __Input:__ filename: string - the name of the input file of the FA ("FA.in")    
 __Output:__ none
