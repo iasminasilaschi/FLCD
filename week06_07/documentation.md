@@ -4,19 +4,19 @@ https://github.com/iasminasilaschi/FLCD.git
 
 A Finite Automata consists of the following: 
 
-Q : Finite set of states
-Σ : set of Input Symbols
-q : Initial state
-F : set of Final States
-δ : Transition Function
+Q : Finite set of states  
+Σ : set of Input Symbols  
+q : Initial state  
+F : set of Final States  
+δ : Transition Function  
 
 They are represented as dictionaries:
 
-Q -> Q_set_of_states = {}
-Σ -> E_alphabet = {}
-q -> q0_initial_state = {}
-F -> F_set_of_final_states = {}
-δ -> T_transitions = {}
+Q -> Q_set_of_states = {}  
+Σ -> E_alphabet = {}  
+q -> q0_initial_state = {}  
+F -> F_set_of_final_states = {}  
+δ -> T_transitions = {}  
 
 
 
