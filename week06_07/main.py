@@ -3,7 +3,7 @@ from week06_07.Scanner import Scanner
 
 if __name__ == '__main__':
 
-    fa = FA("FA.in")
+    fa = FA("resources/FA.in")
     print("Welcome!")
 
     while True:

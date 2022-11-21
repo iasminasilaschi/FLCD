@@ -46,3 +46,22 @@ __Output:__ true if it is valid, false otherwise
 __Description:__ Reads the components of the FA and populates all the components. They should be structured as specified in the "FA_syntax.in" file.  
 __Input:__ filename: string - the name of the input file of the FA ("FA.in")    
 __Output:__ none
+
+### FA Syntax EBNF:
+
+big_letter = "A" | "B" | . ..| "Z"  
+small_letter = "a" | "b" | . ..| "z"  
+letter = big_letter | small_letter  
+non-zero = "1" |...| "9"  
+digit = "0" | non-zero  
+state = letter [digit] | letter | digit  
+alphabet_element = letter | digit  
+states_int =  state | state "," states_int  
+states = "Q" "=" "{" states_int "}"  
+alphabet_int = alphabet_element | alphabet_element "," alphabet_int  
+alphabet = "E" "=" "{" alphabet_int "}"  
+initial_state = "q0" "=" {" state "}"  
+final_states = "F" "=" "{" states_int "}"  
+transition = "(" state "," alphabet_element ")" "-" ">" state  
+transitions_int = transition | transition NEWLINE transitions_int  
+transitions = "T" "=" "{" transitions_int "}"  
