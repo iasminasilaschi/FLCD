@@ -40,7 +40,7 @@ __Output:__ true is the sequence is accepted by the FA, false otherwise
 #### is_FA_valid(self):
 __Description:__ Checks if the FA is valid: checks the components.  
 __Input:__ none  
-__Output:__ true is if it valid, false otherwise
+__Output:__ true if it is valid, false otherwise
 
 #### read_input_file(self):
 __Description:__ Reads the components of the FA and populates all the components. They should be structured as specified in the "FA_syntax.in" file.
