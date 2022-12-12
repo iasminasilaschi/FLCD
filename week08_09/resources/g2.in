@@ -1,0 +1,203 @@
+Alphabet:
+
+a. Upper (A-Z) and lower case letters (a-z) of the English alphabet
+
+b. Underline character '_';
+
+c. Decimal digits (0-9);
+
+
+Lexic:
+
+a. Special symbols, representing:
+
+	- operators + - * / % = == < <= > >= !=
+
+	- separators ( ) { } [ ] ; space
+
+	- reserved words:
+
+		array of char string  int const typedef var
+
+		if then else read write while begin program end
+
+
+b. identifiers
+
+	- a sequence of letters and digits, such that the first character is a letter; the rule is:
+
+    	identifier ::= letter | letter{letter}{digit}
+
+    	letter ::= "A" | "B" | . ..| "Z"
+
+    	digit ::= "0" | "1" |...| "9"
+
+
+c. constants
+
+	1. integer - rule:
+
+         noconst:="+"no|"-"no|no
+
+         no:=digit{no}
+
+	2. character
+
+         character:='letter'|'digit'
+
+	3. string
+
+         constchar:="string"
+
+         string:=char{string}
+
+         char:=letter|digit
+
+------------------------
+
+program ::= "BEGIN" decllist ";" cmpdstmt "END"
+
+decllist ::= declaration | declaration ";" decllist
+
+declaration ::= type IDENTIFIER
+
+type1 ::= "BOOL" | "CHAR" | "INT" | "FLOAT"
+
+arraydecl ::= "ARRAY" "[" nr "]" "OF" type1
+
+type  ::= type1|arraydecl
+
+userdef ::= "TYPEDEF" IDENTIFIER "{" decllist "}"
+
+cmpdstmt ::= "{" stmtlist "}"
+
+stmtlist ::= stmt | stmt ";" stmtlist
+
+stmt ::= simplstmt | structstmt
+
+simplstmt ::= assignstmt | iostmt
+
+assignstmt ::= IDENTIFIER "=" expression
+
+expression ::= expression "+" term | term
+
+term ::= term "*" factor | factor
+
+factor ::= "(" expression ")" | IDENTIFIER
+
+iostmt ::= "READ" | "WRITE" "(" IDENTIFIER ")"
+
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+
+ifstmt ::= "IF" "(" condition ")" "THEN" stmt "ELSE" stmt
+
+whilestmt ::= "WHILE" "(" condition ")" "{" stmt "}"
+
+condition ::= expression RELATION expression
+
+RELATION ::= "<" | "<=" | "==" | "!=" | ">=" | ">"
+
+---------------------
+
+A
+a
+B
+b
+C
+c
+D
+d
+E
+e
+F
+f
+G
+g
+H
+h
+I
+i
+J
+j
+K
+k
+L
+l
+M
+m
+N
+n
+O
+o
+P
+p
+Q
+q
+R
+r
+S
+s
+T
+t
+U
+u
+V
+v
+W
+w
+X
+x
+Y
+y
+Z
+z
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
++
+-
+*
+/
+%
+=
+==
+!=
+<
+<=
+>
+>=
+{
+}
+(
+)
+[
+]
+;
+space
+array
+of
+char
+string
+int
+bool
+const
+typedef
+var
+if
+else
+and
+or
+program
+read
+write
+while
+for
+BEGIN
+END
