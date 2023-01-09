@@ -15,13 +15,3 @@ class ProductionSet:
         if key not in self.hashMap.keys():
             self.hashMap[key] = []
         self.hashMap[key].extend(values)
-
-    def toString(self):
-        hash_map = ""
-        for i in self.hashMap.keys():
-            hash_map += "["
-            hash_map += i
-            hash_map += "->"
-            hash_map += str(self.hashMap[i])
-            hash_map += "], "
-        return hash_map
