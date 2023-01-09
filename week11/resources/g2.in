@@ -1,0 +1,24 @@
+program decllist declaration type1 arraydecl type userdef cmpdstmt stmtlist stmt simplstmt assignstmt expression term factor iostmt structstmt ifstmt whilestmt condition relation
+"BEGIN" ";" "END" "BOOL" "CHAR" "INT" "FLOAT" "ARRAY" "[" "]" "OF" "TYPEDEF" "{" "}" "=" "+" "*" "(" ")" "READ" "WRITE" "IF" "ELSE" "THEN" "WHILE" "<" "<=" "==" "!=" ">=" ">"
+term
+program ::= "BEGIN" decllist ";" cmpdstmt "END"
+decllist ::= declaration | declaration ";" decllist
+declaration ::= type IDENTIFIER
+type1 ::= "BOOL" | "CHAR" | "INT" | "FLOAT"
+arraydecl ::= "ARRAY" "[" nr "]" "OF" type1
+type  ::= type1 | arraydecl
+userdef ::= "TYPEDEF" IDENTIFIER "{" decllist "}"
+cmpdstmt ::= "{" stmtlist "}"
+stmtlist ::= stmt | stmt ";" stmtlist
+stmt ::= simplstmt | structstmt
+simplstmt ::= assignstmt | iostmt
+assignstmt ::= IDENTIFIER "=" expression
+expression ::= expression "+" term | term
+term ::= term "*" factor | factor
+factor ::= "(" expression ")" | IDENTIFIER
+iostmt ::= "READ" | "WRITE" "(" IDENTIFIER ")"
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+ifstmt ::= "IF" "(" condition ")" "THEN" stmt "ELSE" stmt
+whilestmt ::= "WHILE" "(" condition ")" "{" stmt "}"
+condition ::= expression RELATION expression
+RELATION ::= "<" | "<=" | "==" | "!=" | ">=" | ">"
