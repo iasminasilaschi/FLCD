@@ -1,0 +1,5 @@
+1    |    term    |    0    |    0    |    
+2    |    term "*" factor    |    term    |    0    |    
+3    |    factor    |    term    |    term "*" factor    |    
+4    |    "(" expression ")"    |    factor    |    0    |    
+5    |    IDENTIFIER    |    factor    |    "(" expression ")"    |    
