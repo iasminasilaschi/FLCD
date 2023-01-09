@@ -25,9 +25,10 @@ class ProductionSet:
     def __str__(self):
         hash_map = ""
         for i in self.hash_map.keys():
-            hash_map += "["
+            hash_map += "{'"
             hash_map += i
-            hash_map += "->"
+            hash_map += "': "
             hash_map += str(self.hash_map[i])
-            hash_map += "], "
+            hash_map += "}, "
+        # hash_map += "}"
         return hash_map
