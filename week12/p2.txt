@@ -1,0 +1,29 @@
+BEGIN
+
+int x;
+
+bool isPrime = true;
+
+read(x);
+
+if(x <= 0) {
+
+isPrime = false;
+
+} else if(x == 1) {
+
+isPrime = false;
+}
+
+for (i = 2; i <= sqrt(x); i++) {
+
+if( x%i == 0) {
+
+isPrime = false;
+
+}
+}
+
+write(isPrime);
+
+END

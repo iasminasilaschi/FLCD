@@ -1,0 +1,24 @@
+BEGIN
+
+int sum = 0;
+
+int aux;
+
+int n;
+
+int i = 0;
+
+array[100] of int numbers;
+
+read(n);
+
+for (i=0; i<n; i++) {
+
+read(aux);
+
+sum = sum + aux;
+}
+
+write(sum);
+
+END
